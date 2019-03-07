@@ -1,0 +1,15 @@
+[submodule "jessfraz"]
+	path = jessfraz
+	url = git@github.com:aogier/jessfraz-dockerfiles.git
+[submodule "couchdb-python/hooks"]
+	path = couchdb-python/hooks
+	url = git@github.com:aogier/dockerfiles.git
+	branch = hooks
+[submodule "base-notebook-plotly/hooks"]
+	path = base-notebook-plotly/hooks
+	url = git@github.com:aogier/dockerfiles.git
+	branch = hooks
+[submodule "moderncv/hooks"]
+	path = moderncv/hooks
+	url = git@github.com:aogier/dockerfiles.git
+	branch = hooks
