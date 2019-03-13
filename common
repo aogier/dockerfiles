@@ -1,0 +1,3 @@
+maintainer=$(echo $IMAGE_NAME | cut -d/ -f2)
+whoami=$(basename $(readlink -e .))
+tags=$(git tag -l --points-at HEAD)

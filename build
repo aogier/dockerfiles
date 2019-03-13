@@ -1,3 +1,11 @@
 #!/bin/sh
 
-echo build disabled
+set -x
+
+. hooks/common
+
+if echo $GIT_MSG | grep "build: $whoami"; then
+
+    docker build -t $maintainer/$whoami:$DOCKER_TAG .
+
+fi
