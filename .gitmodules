@@ -9,3 +9,7 @@
 	path = hooks
 	url = git@github.com:aogier/dockerfiles.git
 	branch = hooks
+[submodule "couchdb-python/hooks"]
+	path = couchdb-python/hooks
+	url = git@github.com:aogier/dockerfiles.git
+	branch = hooks
