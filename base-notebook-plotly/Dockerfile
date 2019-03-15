@@ -1,4 +1,8 @@
-FROM jupyter/base-notebook
+#
+# \
+# ss
+FROM jupyter/base-notebook:latest
+#FROM jupyter/base-notebook:022da74a0c8f
 
 # from https://github.com/plotly/plotly.py#installation
 RUN export NODE_OPTIONS=--max-old-space-size=4096; \
@@ -11,4 +15,3 @@ RUN export NODE_OPTIONS=--max-old-space-size=4096; \
     && jupyter lab build \
     && conda install --quiet --yes -c plotly plotly-orca psutil \
     && rm -r .cache
-
