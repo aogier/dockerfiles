@@ -4,10 +4,25 @@ set -x
 
 . hooks/common
 
-set
+if echo $GIT_MSG | grep "build: $whoami"; then
 
-#if echo $GIT_MSG | grep "build: $whoami"; then
+    short_rev=$(git rev-parse --short HEAD)
 
-#    docker build -t $maintainer/$whoami:$DOCKER_TAG .
+    docker push $maintainer/$whoami:$DOCKER_TAG
 
-#fi
+    docker tag \
+        $maintainer/$whoami:$DOCKER_TAG \
+        $maintainer/$whoami:$short_rev
+
+    docker push $maintainer/$whoami:$short_rev
+
+    for tag in $(git tag -l --points-at HEAD); do
+
+        docker tag \
+            $maintainer/$whoami:$DOCKER_TAG \
+            $maintainer/$whoami:$tag
+
+        docker push $maintainer/$whoami:$tag
+    done
+
+fi
