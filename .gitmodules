@@ -13,3 +13,7 @@
 	path = moderncv/hooks
 	url = git@github.com:aogier/dockerfiles.git
 	branch = hooks
+[submodule ".hooks"]
+	path = .hooks
+	url = git@github.com:aogier/dockerfiles.git
+	branch = hooks
