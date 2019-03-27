@@ -17,3 +17,6 @@
 	path = .hooks
 	url = git@github.com:aogier/dockerfiles.git
 	branch = hooks
+[submodule "aws-kubectl/hooks"]
+	path = aws-kubectl/hooks
+	url = git@github.com:aogier/dockerfiles.git
