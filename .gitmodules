@@ -20,3 +20,6 @@
 [submodule "aws-kubectl/hooks"]
 	path = aws-kubectl/hooks
 	url = git@github.com:aogier/dockerfiles.git
+[submodule "aws-ecr-kube-credmaker/hooks"]
+	path = aws-ecr-kube-credmaker/hooks
+	url = git@github.com:aogier/dockerfiles.git
