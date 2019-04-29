@@ -17,3 +17,7 @@
 	path = .hooks
 	url = git@github.com:aogier/dockerfiles.git
 	branch = hooks
+[submodule "gitlab-cli/hooks"]
+	path = gitlab-cli/hooks
+	url = git@github.com:aogier/dockerfiles.git
+	branch = hooks
