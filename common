@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # vim: syntax=sh
 
 maintainer=$(echo $IMAGE_NAME | cut -d/ -f2)
