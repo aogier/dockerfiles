@@ -1,11 +1,11 @@
 # vim: syntax=dockerfile
-FROM couchdb:2.3.0
+FROM couchdb:2.3.1
 
 RUN apt-get update \
     && apt-get --no-install-recommends install -y \
         python3-setuptools=33.1.1-1 \
-        python3-pip=9.0.1-2 \
-        git=1:2.11.0-3+deb9u4 \
+        python3-pip=9.0.1-2+deb9u1 \
+        git=1:2.11.0-3+deb9u5 \
     && pip3 install git+https://github.com/aogier/couchdb-python@bugfix/py3 \
     && apt-get purge -y python3-setuptools python3-pip git \
     && apt-get autoremove -y \
